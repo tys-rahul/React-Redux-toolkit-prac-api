@@ -14,6 +14,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import logo from "../../logo.svg";
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
 export function Counter() {
@@ -28,7 +30,7 @@ export function Counter() {
   }, []);
 // console.log(posts,'rahul');
 if(loading) {
-  return <h2>Loading...</h2>
+  return <h2 className='text-center'>Loading...</h2>
 }
   return (
     <div>
@@ -37,13 +39,18 @@ if(loading) {
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
       </header>
+      <div className="text-center">
+      <Link className='links' to={"/user"}>
+      <Button variant="success" className="cmnBtn">User Details</Button>
+      </Link>
+      </div>
     </div>
 
-      <Row xs={1} md={4} className="g-4 ms-5 me-5">
+      <Row xs={1} md={4} className="g-4 ms-5 mt-2 me-5">
       {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
       {posts.slice(0, 50).map((item) => (
         <Col key={item.id}>
-          <Card >
+          <Card>
             <Card.Img  variant="top" src={item.url} width={50} height={250} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
