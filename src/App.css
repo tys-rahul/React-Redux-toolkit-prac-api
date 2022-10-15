@@ -27,6 +27,16 @@
   padding-bottom: 2rem;
   
 }
+.tblbtn{
+  text-decoration: none;
+  background: #1f8657;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+}
+.tableMain{
+  text-align: center;
+}
 .cmnBtn{
   background: rgb(112, 76, 182);
 

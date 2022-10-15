@@ -5,6 +5,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import User from "./features/pages/User";
+import UserDetail from './features/pages/UserDetail';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         {/* Routes starts here */}
         <Route path='/' element={<Counter />} />
         <Route path='user' element={<User />} />
+        <Route path='userDetails/:id' element={<UserDetail />} />
         {/* Routes ends here */}
       </Routes>
     </BrowserRouter>
